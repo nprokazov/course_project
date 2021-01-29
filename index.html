@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Blanchard</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
+    <header class="header-top">
+        <div class="container header-container">
             <div class="logo"><a href=""><img src="content_img/logo.svg" alt=""></a></div>
             <nav class="navigation">
                 <ul class="navigation__list">
@@ -23,25 +24,45 @@
                     <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="auth"><span class="auth__icon"></span>Войти</div>
+            <div class="auth"><a href="" class="auth__link"><span class="auth__icon"></span>Войти</a></div>
         </div>
-        <div class="product-nav">
-            <div class="container">
+    </header>
+    <header class="header-bot">
+        <div class="container header-container">
+            <nav class="product-nav">
                 <ul class="product-nav__list">
-                    <li class="product-nav__item">Реализм<span></span></li>
-                    <li class="product-nav__item">Импрессионизм<span></span></li>
-                    <li class="product-nav__item">Постимпрессионизм<span></span></li>
-                    <li class="product-nav__item">Авангард<span></span></li>
-                    <li class="product-nav__item">Футуризм<span></span></li>
+                    <li class="product-nav__item">
+                        <div class="product-nav__header">Реализм<span class="product-nav__arrow"></span></div>
+                        <div class="popup__menu">df</div>
+                    </li>
+                    <li class="product-nav__item">
+                        <div class="product-nav__header">Импрессионизм<span class="product-nav__arrow"></span></div>
+                        <div class="popup__menu">df</div>
+                    </li>
+                    </li>
+                    <li class="product-nav__item">
+                        <div class="product-nav__header">Постимпрессионизм<span class="product-nav__arrow"></span></div>
+                        <div class="popup__menu">df</div>
+                    </li>
+                    </li>
+                    <li class="product-nav__item">
+                        <div class="product-nav__header">Авангард<span class="product-nav__arrow"></span></div>
+                        <div class="popup__menu">df</div>
+                    </li>
+                    </li>
+                    <li class="product-nav__item">
+                        <div class="product-nav__header">Футуризм<span class="product-nav__arrow"></span></div>
+                        <div class="popup__menu">df</div>
+                    </li>
+                    </li>
                 </ul>
-                <div class="search">
-                    <button class="search__button"></button>
-                    <input type="text" name="" id="" class="search__input">
-                </div>
+            </nav>
+            <div class="search">
+                <button class="search__button"><img src="css/background_img/search.svg" alt=""></button>
+                <input type="text" name="" id="" class="search__input" placeholder="Поиск по сайту">
             </div>
         </div>
     </header>
-
     <main>
         <section class="section-hero">
             <div class="container">
@@ -49,20 +70,24 @@
                     <h1 class="section-hero__header">Прикоснитесь к прекрасному</h1>
                     <p class="section-hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
                         заданий создаёт предпосылки для новых предложений.</p>
-                    <a href="" class="button section-hero__button"></a>
+                    <a href="" class="button section-hero__button">Подписаться на рассылку</a>
                 </div>
             </div>
         </section>
         <section class="section-we">
-            <h2 class="section-heading">О нас</h2>
-            <p class="section-text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
-                однозначно определяет каждого участника как способного принимать собственные решения касаемо
-                распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный
-                прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная
-                практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в
-                производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних
-                резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции
-                набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+            <div class="container">
+                <h2 class="section-heading">О нас</h2>
+                <p class="section-text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
+                    однозначно определяет каждого участника как способного принимать собственные решения касаемо
+                    распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный
+                    прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития.
+                    Повседневная
+                    практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в
+                    производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения
+                    внутренних
+                    резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции
+                    набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+            </div>
         </section>
         <section class="section-gallery">
             <div class="container">
@@ -207,67 +232,68 @@
             </div>
         </section>
         <section class="section-edition">
-            <div class="container"></div>
-            <div class="section-content">
-                <div class="filter-menu">
-                    <h2 class="section-heading">Издания</h2>
-                    <h3 class="filter-menu__heading">Категории</h3>
-                    <ul class="filter-menu__list">
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Искусство"><span></span>Искусство</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Архитектура"><span></span>Архитектура</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Дизайн"><span></span>Дизайн</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Мода"><span></span>Мода</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Детям"><span></span>Детям</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Художественная литература"><span></span>Художественная литература</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Публицистика"><span></span>Публицистика</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Путеводители"><span></span>Путеводители</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Философия"><span></span>Философия</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Учебная литература"><span></span>Учебная литература</label>
-                        </li>
-                        <li class="filter-menu__item">
-                            <label class="filter-menu__checkbox"><input type="checkbox"
-                                    name="Журналы и газеты"><span></span>Журналы и газеты</label>
-                        </li>
-                    </ul>
-                    <h3 class="filter-menu__heading">Цена</h3>
-                    <div class="filter-range">
-                        <span class="filter-range__Text">От</span>
-                        <input type="text" name="" class="filter-range__Input">
-                        <span class="filter-range__Text">До</span>
-                        <input type="text" name="" class="filter-range__Input">
-                        <span class="filter-range__Text">Руб.</span>
+            <div class="container">
+                <div class="section-content">
+                    <div class="filter-menu">
+                        <h2 class="section-heading">Издания</h2>
+                        <h3 class="filter-menu__heading">Категории</h3>
+                        <ul class="filter-menu__list">
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Искусство"><span></span>Искусство</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Архитектура"><span></span>Архитектура</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Дизайн"><span></span>Дизайн</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Мода"><span></span>Мода</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Детям"><span></span>Детям</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Художественная литература"><span></span>Художественная литература</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Публицистика"><span></span>Публицистика</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Путеводители"><span></span>Путеводители</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Философия"><span></span>Философия</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Учебная литература"><span></span>Учебная литература</label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Журналы и газеты"><span></span>Журналы и газеты</label>
+                            </li>
+                        </ul>
+                        <h3 class="filter-menu__heading">Цена</h3>
+                        <div class="filter-range">
+                            <span class="filter-range__Text">От</span>
+                            <input type="text" name="" class="filter-range__Input">
+                            <span class="filter-range__Text">До</span>
+                            <input type="text" name="" class="filter-range__Input">
+                            <span class="filter-range__Text">Руб.</span>
+                        </div>
                     </div>
+                    <div class="swiper"></div>
                 </div>
-                <div class="swiper"></div>
             </div>
             </div>
         </section>
@@ -321,12 +347,14 @@
     </main>
 
     <footer class="footer">
-        <div class="logo"><a href=""><img src="content_img/logo.svg" alt=""></a></div>
-        <ul class="social-network">
-            <li class="social-network__item"><a href=""><span class="vk"></span></a></li>
-            <li class="social-network__item"><a href=""><span class="instagramm"></span></a></li>
-            <li class="social-network__item"><a href=""><span class="facebook"></span></a></li>
-        </ul>
+        <div class="container">
+            <div class="logo"><a href=""><img src="content_img/logo.svg" alt=""></a></div>
+            <ul class="social-network">
+                <li class="social-network__item"><a href=""><span class="vk"></span></a></li>
+                <li class="social-network__item"><a href=""><span class="instagramm"></span></a></li>
+                <li class="social-network__item"><a href=""><span class="facebook"></span></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 
