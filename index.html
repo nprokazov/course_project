@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Blanchard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <title>Blanchard</title>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="js/index.js" defer></script>
 </head>
 
 <body>
@@ -24,41 +27,102 @@
                     <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="auth"><a href="" class="auth__link"><span class="auth__icon"></span>Войти</a></div>
+            <div class="auth"><a href="" class="auth__link"><span class="auth__icon"><svg width="13" height="13"
+                            viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+                                fill="white" />
+                        </svg></span>Войти</a></div>
         </div>
     </header>
     <header class="header-bot">
         <div class="container header-container">
             <nav class="product-nav">
                 <ul class="product-nav__list">
-                    <li class="product-nav__item">
+                    <li class="product-nav__item" tabindex="0">
                         <div class="product-nav__header">Реализм<span class="product-nav__arrow"></span></div>
-                        <div class="popup__menu">df</div>
+                        <div class="popup__menu popup__menu-disabled">
+                            <ul class="product-nav__menuList">
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink1_1">Тинторетто</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink1_2">Фридрих</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink1_3">Леонардо</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink1_4">Верроккьо</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="product-nav__item">
+                    <li class="product-nav__item" tabindex="0">
                         <div class="product-nav__header">Импрессионизм<span class="product-nav__arrow"></span></div>
-                        <div class="popup__menu">df</div>
+                        <div class="popup__menu popup__menu-disabled">
+                            <ul class="product-nav__menuList">
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink2_1">Моне</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink2_2">Сислей</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink2_3">Мане</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink2_4">Ренуар</a></li>
+                            </ul>
+                        </div>
                     </li>
                     </li>
-                    <li class="product-nav__item">
+                    <li class="product-nav__item" tabindex="0">
                         <div class="product-nav__header">Постимпрессионизм<span class="product-nav__arrow"></span></div>
-                        <div class="popup__menu">df</div>
+                        <div class="popup__menu popup__menu-disabled">
+                            <ul class="product-nav__menuList">
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink3_1">Ван
+                                        Гог</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink3_2">Сезанн</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink3_3">Гоген</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink3_4">Сёра</a></li>
+                            </ul>
+                        </div>
                     </li>
                     </li>
-                    <li class="product-nav__item">
+                    <li class="product-nav__item" tabindex="0">
                         <div class="product-nav__header">Авангард<span class="product-nav__arrow"></span></div>
-                        <div class="popup__menu">df</div>
+                        <div class="popup__menu popup__menu-disabled">
+                            <ul class="product-nav__menuList">
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink4_1">Кандинский</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink4_2">Маринетти</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink4_3">Малевич</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink4_4">Пикассо</a></li>
+                            </ul>
+                        </div>
                     </li>
                     </li>
-                    <li class="product-nav__item">
+                    <li class="product-nav__item" tabindex="0">
                         <div class="product-nav__header">Футуризм<span class="product-nav__arrow"></span></div>
-                        <div class="popup__menu">df</div>
+                        <div class="popup__menu popup__menu-disabled">
+                            <ul class="product-nav__menuList">
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink5_1">Карра</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink5_2">Прателла</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink5_3">Северини</a></li>
+                                <li class="product-nav__menuItem"><a href=""
+                                        class="product-nav__menuLink menuLink5_4">Балла</a></li>
+                            </ul>
+                        </div>
                     </li>
                     </li>
                 </ul>
             </nav>
             <div class="search">
-                <button class="search__button"><img src="css/background_img/search.svg" alt=""></button>
+                <button class="search__button"><span class="search__button-img"></span></button>
                 <input type="text" name="" id="" class="search__input" placeholder="Поиск по сайту">
             </div>
         </div>
@@ -357,5 +421,4 @@
         </div>
     </footer>
 </body>
-
 </html>
