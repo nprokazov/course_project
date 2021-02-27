@@ -613,7 +613,7 @@ ul {
         display: block;
     }
     .burger-menu__window {
-        /* display: none; */
+        display: none;
     }
     .navigation {
         display: none;
