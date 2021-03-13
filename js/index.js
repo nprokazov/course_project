@@ -3,27 +3,38 @@ function headerTopAction(elem) {
     //Назначаем необходиымые элементы
     let element; // элемент на котороый повесим обработчик
     const burgerIcon = document.querySelector('.burger-menu__icon'); // Наше бургер меню, для открытия меню
-    const burgerCloseIcon = document.querySelector('.burger-menu__closeIcon'); // Крестик для Закрытия меню
-    const burgerWindow = document.querySelector('.burger-menu__window'); // Само меню
+    const burgerCloseIcon1 = document.querySelectorAll('.burger-menu__closeIcon')[0]; // Крестик для Закрытия меню бургер
+    const burgerCloseIcon2 = document.querySelectorAll('.burger-menu__closeIcon')[1]; // Крестик для Закрытия меню поиска на экранах 768 и 320
+    const burgerWindow = document.querySelector('.burger-menu__window'); // окно бургер меню
     const search = document.querySelector('.search__button'); // Кнопка поиска для открытия инпута
     const searchInput = document.querySelector('.search__input'); // инпут поиска для скрытия и открытия
+    const searchWindow = document.querySelector('.search__window'); // окно для поиска на экранах 728 и 1024
     // проверка клика пользователя
     if (elem === burgerIcon || elem.parentElement === burgerIcon) element = burgerIcon; // Определяем был ли клик на бургер-меню
-    else if (elem === burgerCloseIcon || elem.parentElement === burgerCloseIcon) element = burgerCloseIcon; // Или бы ли клик на крестик для закрытия меню
+    else if (elem === burgerCloseIcon1 || elem.parentElement === burgerCloseIcon1) element = burgerCloseIcon1; // Или бы ли клик на крестик для закрытия меню
+    else if (elem === burgerCloseIcon2 || elem.parentElement === burgerCloseIcon2) element = burgerCloseIcon2; // Или бы ли клик на крестик для закрытия меню
     else if (elem === search || elem.parentElement === search) element = search; // Или бы ли клик на крестик для закрытия меню
 
     switch (element) {
         case burgerIcon: //Если нажат на бургер то меню откроется
             burgerWindow.classList.remove('burger-menu__window-disabled');
             break;
-        case burgerCloseIcon: // если открыто меню и нажать на крестик то оно закроется
+        case burgerCloseIcon1: // если открыто меню и нажать на крестик то оно закроется
             burgerWindow.classList.add('burger-menu__window-disabled');
             break;
+        case burgerCloseIcon2: // если открыто меню и нажать на крестик то оно закроется
+            searchWindow.classList.add('search__window-disabled');
+            break;
         case search: // если открыто меню и нажать на крестик то оно закроется
-            searchInput.classList.remove('search__input-disabled');
+            if (document.body.offsetWidth == 320 || document.body.offsetWidth == 768) searchWindow.classList.remove('search__window-disabled');
+            else searchInput.classList.remove('search__input-disabled');
             break;
         default:
-            searchInput.classList.add('search__input-disabled');
+           if (element != search && elem != searchInput) searchInput.classList.add('search__input-disabled');
+           if (elem.parentNode != document.querySelectorAll('.search__button')[1] &&
+               elem != document.querySelectorAll('.search__input')[1] &&
+               elem != searchWindow &&
+               elem.parentNode != searchWindow) searchWindow.classList.add('search__window-disabled');
     }
 }
 // headerBot
