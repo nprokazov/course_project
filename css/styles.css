@@ -33,7 +33,7 @@
 
 body {
     margin: 0 auto;
-    width: 1920px;
+    max-width: 1920px;
     font-family: 'Open Sans';
     background-color: var(--backgroundColor);
 }
@@ -54,7 +54,7 @@ ul {
 
 .container {
     margin: 0 auto;
-    width: 1600px;
+    width: calc(1600*100%/1920);
 }
 
 .button {
@@ -67,9 +67,9 @@ ul {
 /* header-top */
 
 .header-top {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     padding: 29px 0;
     background-color: #000000;
     z-index: 2;
@@ -80,9 +80,13 @@ ul {
 }
 
 .burger-menu__icon {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
     width: 36px;
     height: 28px;
+    border: none;
+    background: transparent;
 }
 
 .burger-menu__icon:hover {
@@ -95,24 +99,18 @@ ul {
     background: var(--whiteTextColor);
 }
 
-.burger-menu__icon span::after, .burger-menu__icon span::before {
-    content: '';
-    height: 3.65px;
-    background: var(--whiteTextColor);
+.burger-menu__icon span:nth-child(1) {
+    width: 100%;
 }
 
-.burger-menu__icon span::after {
-    position: absolute;
-    top: 50%;
-    width: 28.2px;
-    transform: translateY(-50%);
+.burger-menu__icon span:nth-child(2) {
+    margin-top: auto;
+    width: 80%;
 }
 
-.burger-menu__icon span::before {
-    position: absolute;
-    top: 100%;
-    width: 24px;
-    transform: translateY(-100%);
+.burger-menu__icon span:nth-child(3) {
+    margin-top: auto;
+    width: 60%;
 }
 
 .burger-menu__window {
@@ -120,8 +118,8 @@ ul {
     top: 0;
     left: 0;
     padding-top: 29px;
+    padding-bottom: 50px;
     width: 100%;
-    height: 90vh;
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -192,7 +190,7 @@ ul {
 }
 
 .logo {
-    margin-right: 180px;
+    margin-right: 10px;
 }
 
 .logo a:focus {
@@ -200,7 +198,13 @@ ul {
 }
 
 .navigation {
-    margin-right: auto;
+    margin: 0 auto;
+    flex-basis: 900px;
+}
+
+.auth {
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 .navigation__list {
@@ -208,7 +212,7 @@ ul {
 }
 
 .navigation__item:not(:last-child) {
-    margin-right: 62px;
+    margin-right: auto;
 }
 
 .navigation__link {
@@ -310,6 +314,7 @@ ul {
 
 .product-nav {
     margin-right: auto;
+    flex-basis: 1040px;
 }
 
 .product-nav__list {
@@ -321,10 +326,13 @@ ul {
 }
 
 .product-nav__item {
-    margin-right: 97px;
     color: var(--whiteTextColor);
     font-size: var(--headerLinkFontSize);
     font-weight: 600;
+}
+
+.product-nav__item:not(:last-child) {
+    margin-right: auto;
 }
 
 .product-nav__item:focus {
@@ -395,6 +403,7 @@ ul {
     right: 20px;
     width: 2px;
     background: black;
+    z-index: 0;
 }
 
 .popup__menu-disabled {
@@ -414,7 +423,7 @@ ul {
 .product-nav__menuLink {
     display: block;
     position: relative;
-    padding: 9px 124px 12px 14px;
+    padding: 11px 124px 11px 14px;
     color: var(--whiteTextColor);
     font-size: var(--pFontSize);
 }
@@ -546,6 +555,7 @@ ul {
 .search__input {
     margin-left: 9px;
     padding: 5px 5px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.85);
     background-color: transparent;
@@ -571,7 +581,7 @@ ul {
 .section-hero {
     position: relative;
     margin: -170.45px 0 0 0;
-    padding: 233px 0 122px 0;
+    padding: 240px 0 127px 0;
     background: url("background_img/hero/1.jpg");
     background-size: 100%;
     background-position: center;
@@ -620,11 +630,12 @@ ul {
 .section-hero__header {
     font-size: 72px;
     font-weight: 700;
-    line-height: 98px;
+    line-height: 85px;
     color: var(--whiteTextColor);
 }
 
 .section-hero__text {
+    margin-top: 15px;
     font-size: var(--headerLinkFontSize);
     font-weight: 700;
     line-height: 30px;
@@ -640,12 +651,22 @@ ul {
     font-size: var(--headerLinkFontSize);
 }
 
+.section-hero__button:visited {
+    border-color: #7943A4;
+}
+
+.section-hero__button:hover {
+    border-color: #D1A9F0;
+}
+
+.section-hero__button:active {
+    border-color: #D1A9F0;
+    background-color: #7943A4;
+}
+
 @media (max-width: 1024px) {
     body {
-        width: 1024px;
-    }
-    .container {
-        width: 924px;
+        max-width: 1024px;
     }
     /* header-top */
     .burger-menu {
@@ -672,17 +693,17 @@ ul {
         margin: -100px 0 0 0;
         padding: 205px 0 120px 0;
         background: url('background_img/hero/1-1024.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::after {
         background: url('background_img/hero/2-1024.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::before {
         background: url('background_img/hero/3-1024.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero__content {
@@ -691,6 +712,9 @@ ul {
     .section-hero__header {
         width: 600px;
         line-height: 90px;
+    }
+    .section-hero__text {
+        margin-top: 5px;
     }
     .section-hero__button {
         margin-top: 135px;
@@ -701,23 +725,20 @@ ul {
     body {
         width: 768px;
     }
-    .container {
-        width: 668px;
-    }
     /* section-hero */
     .section-hero {
         background: url('background_img/hero/1-768.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::after {
         background: url('background_img/hero/2-768.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::before {
         background: url('background_img/hero/3-768.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
 }
@@ -725,9 +746,6 @@ ul {
 @media (max-width: 320px) {
     body {
         width: 320px;
-    }
-    .container {
-        width: 290px;
     }
     /* .header-top */
     .header-top {
@@ -777,17 +795,17 @@ ul {
         margin: -45px 0 0 0;
         padding: 80px 0 45px 0;
         background: url('background_img/hero/1-320.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::after {
         background: url('background_img/hero/2-320.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero::before {
         background: url('background_img/hero/3-320.jpg');
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: center;
     }
     .section-hero__content {
@@ -814,16 +832,16 @@ ul {
 
 @keyframes heroSize {
     0% {
-        background-size: 100%;
+        background-size: auto 100%;
     }
     33% {
-        background-size: 100%;
+        background-size: auto 100%;
     }
     66% {
-        background-size: 100%;
+        background-size: auto 100%;
     }
     100% {
-        background-size: 110%;
+        background-size: auto 110%;
     }
 }
 
