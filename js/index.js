@@ -64,6 +64,10 @@ function popUpMenu(elem) {
 //Ставим события на клик
 document.body.addEventListener('click', ev => popUpMenu(ev.target));//выпадающее меню для нижнего хедера
 document.body.addEventListener('click', ev => headerTopAction(ev.target));//выпадающее меню для нижнего хедера
+document.body.addEventListener('keydown', ev => {
+    if (ev.code == "Space" || ev.code =="Enter") {
+        popUpMenu(ev.target.firstElementChild);}
+});//выпадающее меню для нижнего хедера
 
 //полоса прокрутки у менюшек
 Array.prototype.forEach.call(
@@ -71,5 +75,6 @@ Array.prototype.forEach.call(
     el => new SimpleBar(el, {
         autoHide: false,
         scrollbarMaxSize: 28,
+        scrollbarMinSize: 28,
     })
 );
