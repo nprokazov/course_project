@@ -26,7 +26,7 @@ function headerTopAction(elem) {
             searchWindow.classList.add('search__window-disabled');
             break;
         case search: // если открыто меню и нажать на крестик то оно закроется
-            if (document.body.offsetWidth == 320 || document.body.offsetWidth == 768) searchWindow.classList.remove('search__window-disabled');
+            if (document.body.offsetWidth <= 768) searchWindow.classList.remove('search__window-disabled');
             else searchInput.classList.remove('search__input-disabled');
             break;
         default:
