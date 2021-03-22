@@ -703,7 +703,7 @@ ul {
     padding-bottom: 80px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     body {
         max-width: 1024px;
     }
@@ -802,7 +802,7 @@ ul {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 576px) {
     :root {
         --h2FontSize: 28px;
         --pFontSize: 14px;
