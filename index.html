@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/index.js" defer></script>
 </head>
 
@@ -200,24 +204,144 @@
                     набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
             </div>
         </section>
-        <!-- <section class="section-gallery">
+        <section class="section-gallery">
             <div class="container">
-                <div class="filter-menu">
-                    <h2 class="section-heading">Издания</h2>
-                    <h3 class="filter-menu__heading">Фильтровать по:</h3>
-                    <select name="" id="" class="menu__select">
-                        <option value="name">Название</option>
-                        <option value="technique">Техника</option>
-                    </select>
-                    <p class="menu__note">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
+                <h2 class="section-heading gallery-heading">Галерея</h2>
+                <div class="gallery-container">
+                    <div class="filter-menu">
+                        <h3 class="filter-menu__heading">Фильтровать по:</h3>
+                        <select name="" id="" class="menu__select">
+                            <option value="author">Автор</option>
+                            <option value="direction">Направление</option>
+                            <option value="technique">Техника</option>
+                        </select>
+                        <p class="menu__note">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
+                            скачиваний
+                            <a href="" class="text-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+                        </p>
+                    </div>
+                    <div class="swiper-container gallery__swiper-container">
+                        <div class="swiper-wrapper gallery__swiper-wrapper">
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide2.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide4.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide5.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide6.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide7.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide8.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide9.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide10.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide11.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide12.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide13.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide14.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide15.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide16.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide17.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide18.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide19.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide20.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide21.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide22.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide23.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide24.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide25.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide26.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide27.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide28.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide29.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide gallery__swiper-slide">
+                                <img class="gallery__img-slide" src="content_img/gallery/slide30.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination gallery__pagination"></div>
+                        <div class="swiper-button-prev gallery__button-prev"></div>
+                        <div class="swiper-button-next gallery__button-next"></div>
+                    </div>
+                    <p class="menu__note menu__note-adaptive">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
                         скачиваний
                         <a href="" class="text-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
                     </p>
                 </div>
-                <div class="swiper section-gallery__swiper"></div>
+            </div>
+            <div class="modal__gallery modal__gallery-disabled">
+                <div class="modal__content">
+                    <img class="modal__img" src="content_img/gallery/slide1.jpg" alt="">
+                    <div class="modal__description">
+                        <h3 class="description-heading">Каземир Малевич</h3>
+                        <h4 class="description-subtitle">“Женщина с граблями”</h4>
+                        <p class="description-text">1931-1932</p>
+                        <p class="section-text section-description">Картина из второй серии крестьянского цикла работ
+                            Казимира Малевича.
+                            Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян
+                            после Берлинской и Варшавской выставок в 1927 году.</p>
+                    </div>
+                    <div class="burger-menu__closeIcon modal__closeIcon">
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="section-catalog">
+        <!-- <section class="section-catalog">
             <div class="container">
                 <div class="section-catalog__container">
                     <h2 class="section-heading">Каталог</h2>
