@@ -138,6 +138,6 @@ const choices = new Choices(element, {
 // accordion
 
 $( "#accordion" ).accordion({
-    header: "div",
-    collapsible: true,
+    header: "h3",
+    heightStyle: "content",
 });
