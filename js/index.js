@@ -10,12 +10,14 @@ function headerTopAction(elem) {
     const searchInput = document.querySelector('.search__input'); // инпут поиска для скрытия и открытия
     const searchWindow = document.querySelector('.search__window'); // окно для поиска на экранах 728 и 1024
     const galleryModal = document.querySelector('.modal__gallery');
+    const languagePackList = document.querySelector('.language-pack__list');
     // проверка клика пользователя
     if (elem === burgerIcon || elem.parentElement === burgerIcon) element = burgerIcon; // Определяем был ли клик на бургер-меню
     else if (elem === burgerCloseIcon1 || elem.parentElement === burgerCloseIcon1) element = burgerCloseIcon1; // Или бы ли клик на крестик для закрытия меню
     else if (elem === burgerCloseIcon2 || elem.parentElement === burgerCloseIcon2) element = burgerCloseIcon2; // Или бы ли клик на крестик для закрытия меню
     else if (elem === search || elem.parentElement === search) element = search; // Или бы ли клик на крестик для закрытия меню
     else if (elem.classList[1] === "gallery__swiper-slide" || elem.parentElement.classList[1] === "gallery__swiper-slide") element = galleryModal;
+    else if (languagePackList.contains(elem)) element = languagePackList;
 
     switch (element) {
         case burgerIcon: //Если нажат на бургер то меню откроется
@@ -36,6 +38,11 @@ function headerTopAction(elem) {
             else document.querySelector(".modal__img").setAttribute("src", elem.firstElementChild.getAttribute("src"));
             galleryModal.classList.remove('modal__gallery-disabled');
             break;
+        case languagePackList:
+            for (let child of languagePackList.children) {
+                child.classList.remove("language-pack__item-active");
+                if (child == elem.parentElement) elem.parentElement.classList.add("language-pack__item-active");
+            }
         default:
             if (element != search && elem != searchInput) searchInput.classList.add('search__input-disabled');
             if (elem.parentNode != document.querySelectorAll('.search__button')[1] &&
@@ -126,4 +133,11 @@ const element = document.querySelector('.menu__select');
 const choices = new Choices(element, {
     searchEnabled: false,
     itemSelectText: null
+});
+
+// accordion
+
+$( "#accordion" ).accordion({
+    header: "h3",
+    heightStyle: "content",
 });
