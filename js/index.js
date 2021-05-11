@@ -11,6 +11,7 @@ function headerTopAction(elem) {
     const searchWindow = document.querySelector('.search__window'); // окно для поиска на экранах 728 и 1024
     const galleryModal = document.querySelector('.modal__gallery');
     const languagePackList = document.querySelector('.language-pack__list');
+    const eventButton = document.querySelector('.section-event__button');
     // проверка клика пользователя
     if (elem === burgerIcon || elem.parentElement === burgerIcon) element = burgerIcon; // Определяем был ли клик на бургер-меню
     else if (elem === burgerCloseIcon1 || elem.parentElement === burgerCloseIcon1) element = burgerCloseIcon1; // Или бы ли клик на крестик для закрытия меню
@@ -18,6 +19,8 @@ function headerTopAction(elem) {
     else if (elem === search || elem.parentElement === search) element = search; // Или бы ли клик на крестик для закрытия меню
     else if (elem.classList[1] === "gallery__swiper-slide" || elem.parentElement.classList[1] === "gallery__swiper-slide") element = galleryModal;
     else if (languagePackList.contains(elem)) element = languagePackList;
+    else if (elem === eventButton) element = eventButton;
+    // console.log(element);
 
     switch (element) {
         case burgerIcon: //Если нажат на бургер то меню откроется
@@ -43,6 +46,11 @@ function headerTopAction(elem) {
                 child.classList.remove("language-pack__item-active");
                 if (child == elem.parentElement) elem.parentElement.classList.add("language-pack__item-active");
             }
+        case eventButton:
+            document.querySelectorAll('.event-card').forEach(el => {
+                el.style.display = "block";
+            });
+            eventButton.style.display = "none";
         default:
             if (element != search && elem != searchInput) searchInput.classList.add('search__input-disabled');
             if (elem.parentNode != document.querySelectorAll('.search__button')[1] &&
@@ -140,4 +148,14 @@ const choices = new Choices(element, {
 $( "#accordion" ).accordion({
     header: "h3",
     heightStyle: "content",
+});
+
+//swiper-event
+
+const swiperEvent = new Swiper('.section-event__swiper', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
 });
