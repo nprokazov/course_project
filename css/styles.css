@@ -905,7 +905,7 @@ ul {
 /* section-catalog */
 
 .section-catalog {
-    padding: 75px 0;
+    padding: 75px 0 0 0;
 }
 
 .section-catalog__container {
@@ -1032,7 +1032,7 @@ ul {
     border-top: solid 1px #cacaca;
 }
 
-.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon, .ui-icon, .ui-widget-content .ui-icon, .ui-state-active .ui-icon {
+.ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon, .ui-icon, .ui-widget-content .ui-icon, .ui-state-active .ui-icon {
     margin: 0 10px 0 0;
     width: 50px;
     height: 50px;
@@ -1089,6 +1089,116 @@ ul {
     border: none;
     border-top: solid 1px var(--mainColor);
     border-bottom: solid 1px var(--mainColor);
+}
+
+.ui-state-focus {
+    outline: solid 2px var(--mainColor);
+}
+
+.ui-state-hover .ui-icon {
+    background-color: var(--mainColor);
+}
+
+.ui-state-hover {
+    color: var(--mainColor);
+    border-top: solid 1px;
+    border-color: var(--mainColor);
+}
+
+.ui-accordion .catalog-content__subjectItem:first-child .ui-state-hover {
+    border-color: var(--mainColor);
+}
+
+/* event */
+
+.section-event {
+    padding-top: 90px;
+}
+
+.section-event__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.Museum_Shchuseva {
+    background-image: url("background_img/event/Museum_Shchuseva.jpg");
+}
+
+.MMOMA {
+    background-image: url("background_img/event/MMOMA.jpg");
+}
+
+.Jewish_Museum {
+    background-image: url("background_img/event/Jewish_Museum.jpg");
+}
+
+.Tretyakov_Gallery {
+    background-image: url("background_img/event/Tretyakov_Gallery.jpg");
+}
+
+.MMAM {
+    background-image: url("background_img/event/MMAM.jpg");
+}
+
+.event-card {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 320px 25px 150px 51px;
+    width: calc(100%/3 - 2%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid #cacaca;
+}
+
+.event-card:not(:nth-child(3n)) {
+    margin-right: calc(6%/2);
+}
+
+.event-card:not(:nth-child(-n+3)) {
+    display: none;
+}
+
+.event-card .content-subtitle {
+    margin: 0;
+    text-align: right;
+}
+
+.event-card .content-heading {
+    margin: 10px 0 0 0;
+}
+
+.event-card .section-text {
+    margin-top: 9px;
+    width: 97%;
+}
+
+.event-card__link {
+    position: absolute;
+    bottom: 47px;
+    border-bottom: solid 1px var(--mainColor);
+}
+
+.event-card__link:hover {
+    color: #9D5CD0;
+    border-color: #9D5CD0;
+}
+
+.event-card__link:active {
+    color: #7943A4;
+    border-color: #7943A4;
+}
+
+.section-event__button {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 18px 45px;
+    background: none;
+    color: var(--mainColor);
+}
+
+.section-event__swiper {
+    display: none;
 }
 
 @media (max-width: 1366px) {
@@ -1193,6 +1303,28 @@ ul {
     .catalog-content__list {
         height: 420px;
     }
+    /* event */
+    .Museum_Shchuseva {
+        background-image: url("background_img/event/Museum_Shchuseva-1024.jpg");
+    }
+    .MMOMA {
+        background-image: url("background_img/event/MMOMA-1024.jpg");
+    }
+    .Jewish_Museum {
+        background-image: url("background_img/event/Jewish_Museum-1024.jpg");
+    }
+    .Tretyakov_Gallery {
+        background-image: url("background_img/event/Tretyakov_Gallery-1024.jpg");
+    }
+    .MMAM {
+        background-image: url("background_img/event/MMAM-1024.jpg");
+    }
+    .event-card {
+        padding: 220px 16px 108px 35px;
+    }
+    .event-card .section-text {
+        width: 92%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1276,6 +1408,44 @@ ul {
     }
     .catalog-content__description {
         margin: 50px 0 0 0;
+    }
+    /* event */
+    .section-event {
+        padding-top: 75px;
+    }
+    .Museum_Shchuseva {
+        background-image: url("background_img/event/Museum_Shchuseva-768.jpg");
+    }
+    .MMOMA {
+        background-image: url("background_img/event/MMOMA-768.jpg");
+    }
+    .Jewish_Museum {
+        background-image: url("background_img/event/Jewish_Museum-768.jpg");
+    }
+    .Tretyakov_Gallery {
+        background-image: url("background_img/event/Tretyakov_Gallery-768.jpg");
+    }
+    .MMAM {
+        background-image: url("background_img/event/MMAM-768.jpg");
+    }
+    .event-card {
+        padding: 220px 16px 140px 35px;
+        width: calc(100%/2 - 2.6%);
+    }
+    .event-card:not(:nth-child(-n+2)) {
+        display: none;
+    }
+    .event-card:not(:nth-child(3n)) {
+        margin-right: 0;
+    }
+    .event-card:not(:nth-child(2n)) {
+        margin-right: calc(10%/2);
+    }
+    .event-card .content-heading {
+        font-size: 27px;
+    }
+    .event-card .section-text {
+        margin-top: 2px;
     }
 }
 
@@ -1448,14 +1618,12 @@ ul {
         width: 30px;
         height: 30px;
     }
-
     .section-catalog .container>.section-text {
         display: none;
     }
     .catalog-content {
         margin-top: 13px;
     }
-
     .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon, .ui-icon, .ui-widget-content .ui-icon, .ui-state-active .ui-icon {
         width: 30px;
         height: 30px;
@@ -1477,6 +1645,68 @@ ul {
         width: 99%;
         font-size: 16px;
         line-height: 32px;
+    }
+    /* event */
+    .section-event {
+        padding-top: 45px;
+    }
+    .section-event__list {
+        display: none;
+    }
+    .section-event__swiper {
+        display: block;
+        margin: 6px 0 0 0;
+        height: 725px;
+    }
+    .Museum_Shchuseva {
+        background-image: url("background_img/event/Museum_Shchuseva-320.jpg");
+    }
+    .MMOMA {
+        background-image: url("background_img/event/MMOMA-320.jpg");
+    }
+    .Jewish_Museum {
+        background-image: url("background_img/event/Jewish_Museum-320.jpg");
+    }
+    .Tretyakov_Gallery {
+        background-image: url("background_img/event/Tretyakov_Gallery-320.jpg");
+    }
+    .MMAM {
+        background-image: url("background_img/event/MMAM-320.jpg");
+    }
+    .event-card:not(:nth-child(2n)) {
+        margin-right: 0;
+    }
+    .event-card {
+        margin: 0;
+        padding: 217px 5px 140px 30px;
+        height: 683px;
+    }
+    .event-card .content-heading {
+        margin-top: 8px;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .swiper-slide.event-card {
+        display: block;
+    }
+    .event-card .section-text {
+        margin-top: 20px;
+    }
+    .event-card .section-text {
+        margin-top: 36px;
+        width: 90%;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .section-event__button {
+        display: none;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
     }
 }
 
