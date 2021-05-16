@@ -64,6 +64,10 @@ ul {
     border-radius: 100px;
 }
 
+.button {
+    cursor: pointer;
+}
+
 .section-heading {
     font-size: var(--h2FontSize);
     line-height: 48px;
@@ -1144,7 +1148,7 @@ ul {
 .event-card {
     position: relative;
     margin-bottom: 30px;
-    padding: 320px 25px 150px 51px;
+    padding: 20% 25px 150px 51px;
     width: calc(100%/3 - 2%);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1191,7 +1195,7 @@ ul {
 
 .section-event__button {
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 30px auto;
     padding: 18px 45px;
     background: none;
     color: var(--mainColor);
@@ -1199,6 +1203,194 @@ ul {
 
 .section-event__swiper {
     display: none;
+}
+
+/* edition */
+
+.section-edition {
+    margin-top: 83px;
+    padding: 93px 0 80px 0;
+    background: url("background_img/edition/sectionBackground.jpg");
+}
+
+.section-content {
+    display: flex;
+}
+
+.filter-menu__edition {
+    flex-basis: 28%;
+    display: flex;
+    flex-direction: column;
+    color: var(--whiteTextColor);
+}
+
+.edition__heading {
+    margin-top: 30px;
+}
+
+.filter-menu__item {
+    margin-top: 14px;
+}
+
+.filter-menu__checkbox {
+    position: relative;
+}
+
+.filter-menu__checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.filter-menu__checkbox>input+span::before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    width: 10px;
+    height: 10px;
+    border: var(--whiteTextColor) solid 1px;
+}
+
+.filter-menu__checkbox>input:checked+span::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:checked+span {
+    color: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:checked+span::before {
+    border-color: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:focus+span {
+    outline: solid 1px var(--mainColor);
+}
+
+.filter-menu__checkbox:hover>span {
+    color: var(--mainColor);
+}
+
+.filter-menu__checkbox:hover>span::before {
+    border-color: var(--mainColor);
+}
+
+.edition__heading-price {
+    margin-top: 41px;
+}
+
+.filter-range {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 0 9px;
+    max-width: 280px;
+    border: solid 1px var(--whiteTextColor);
+    border-radius: 5px;
+}
+
+.filter-range__Text {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 9px 0;
+}
+
+.filter-range__Input {
+    padding: 0 10px;
+    width: 30%;
+    height: 100%;
+    background: var(--mainColor);
+    color: var(--whiteTextColor);
+    border: none;
+}
+
+.edition__swiper-container {
+    flex-basis: 72%;
+}
+
+.edition__swiper-wrapper {
+    align-items: flex-end;
+}
+
+.edition__swiper-slide {
+    padding: 410px 0 1px 0;
+    height: auto;
+    background-size: contain;
+    color: var(--whiteTextColor);
+}
+
+.artOfColor {
+    background: url(background_img/edition/card/artOfColor.jpg) no-repeat;
+}
+
+.typographie {
+    background: url(background_img/edition/card/typographie.jpg) no-repeat;
+}
+
+.bookaboutLetters {
+    background: url(background_img/edition/card/bookaboutLetters.jpg) no-repeat;
+}
+
+.nikolayIlyin {
+    background: url(background_img/edition/card/nikolayIlyin.jpg) no-repeat;
+}
+
+.modyleSystem {
+    background: url(background_img/edition/card/modyleSystem.jpg) no-repeat;
+}
+
+.graphicEvolution {
+    background: url(background_img/edition/card/graphicEvolution.jpg) no-repeat;
+}
+
+.artAndVisual {
+    background: url(background_img/edition/card/artAndVisual.jpg) no-repeat;
+}
+
+.edition__slide-header {
+    display: flex;
+    justify-content: space-between;
+}
+.edition__swiper-slide .section-text {
+    margin: 0;
+    width: auto;
+    line-height: 30px;
+}
+
+.edition__swiper-slide .filter-menu__heading {
+    margin: 0;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.edition__button {
+    margin-top: 16px;
+    padding: 8px 24px;
+    color: var(--whiteTextColor);
+    background: none;
+}
+
+.filter-menu__subtitle {
+    font-size: var(--pFontSize);
+    font-weight: 400;
+}
+
+.swiper-pagination__edition {
+    top: 28px;
+    left: 50px;
+    bottom: auto;
+    width: auto;
+    color: var(--whiteTextColor);
+}
+
+.swiper-button-prev__edition, .swiper-button-next__edition {
+    top: 43px;
 }
 
 @media (max-width: 1366px) {
@@ -1320,7 +1512,7 @@ ul {
         background-image: url("background_img/event/MMAM-1024.jpg");
     }
     .event-card {
-        padding: 220px 16px 108px 35px;
+        padding: 22% 16px 108px 35px;
     }
     .event-card .section-text {
         width: 92%;
@@ -1429,7 +1621,7 @@ ul {
         background-image: url("background_img/event/MMAM-768.jpg");
     }
     .event-card {
-        padding: 220px 16px 140px 35px;
+        padding: 31% 16px 140px 35px;
         width: calc(100%/2 - 2.6%);
     }
     .event-card:not(:nth-child(-n+2)) {
@@ -1678,7 +1870,7 @@ ul {
     }
     .event-card {
         margin: 0;
-        padding: 217px 5px 140px 30px;
+        padding: 210px 5px 140px 30px;
         height: 683px;
     }
     .event-card .content-heading {

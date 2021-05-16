@@ -689,59 +689,63 @@
                 <button class="button section-event__button">Все события</button>
             </div>
         </section>
-        <!--  <section class="section-edition">
+        <section class="section-edition">
             <div class="container">
                 <div class="section-content">
-                    <div class="filter-menu">
+                    <div class="filter-menu__edition">
                         <h2 class="section-heading">Издания</h2>
-                        <h3 class="filter-menu__heading">Категории</h3>
+                        <h3 class="filter-menu__heading edition__heading">Категории</h3>
                         <ul class="filter-menu__list">
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Искусство"><span></span>Искусство</label>
+                                        name="Бестселлеры"><span>Бестселлеры</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Архитектура"><span></span>Архитектура</label>
+                                        name="Искусство"><span>Искусство</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Дизайн"><span></span>Дизайн</label>
+                                        name="Архитектура"><span>Архитектура</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Мода"><span></span>Мода</label>
+                                        name="Дизайн"><span>Дизайн</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Детям"><span></span>Детям</label>
+                                        name="Мода"><span>Мода</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Художественная литература"><span></span>Художественная литература</label>
+                                        name="Детям"><span>Детям</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Публицистика"><span></span>Публицистика</label>
+                                        name="Художественная литература"><span>Художественная литература</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Путеводители"><span></span>Путеводители</label>
+                                        name="Публицистика"><span>Публицистика</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Философия"><span></span>Философия</label>
+                                        name="Путеводители"><span>Путеводители</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Учебная литература"><span></span>Учебная литература</label>
+                                        name="Философия"><span>Философия</span></label>
                             </li>
                             <li class="filter-menu__item">
                                 <label class="filter-menu__checkbox"><input type="checkbox"
-                                        name="Журналы и газеты"><span></span>Журналы и газеты</label>
+                                        name="Учебная литература"><span>Учебная литература</span></label>
+                            </li>
+                            <li class="filter-menu__item">
+                                <label class="filter-menu__checkbox"><input type="checkbox"
+                                        name="Журналы и газеты"><span>Журналы и газеты</span></label>
                             </li>
                         </ul>
-                        <h3 class="filter-menu__heading">Цена</h3>
+                        <h3 class="filter-menu__heading edition__heading-price">Цена</h3>
                         <div class="filter-range">
                             <span class="filter-range__Text">От</span>
                             <input type="text" name="" class="filter-range__Input">
@@ -750,12 +754,79 @@
                             <span class="filter-range__Text">Руб.</span>
                         </div>
                     </div>
-                    <div class="swiper"></div>
+                    <div class="swiper-container edition__swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper edition__swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide edition__swiper-slide artOfColor">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Искусство цвета</h3>
+                                    <p class="section-text">620 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Иттен, Йоханес</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide typographie">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Типографика</h3>
+                                    <p class="section-text">2450 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Рудер, Эмиль</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide bookaboutLetters">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Книга про буквы</h3>
+                                    <p class="section-text">2200 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Гордон, Юрий</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide nikolayIlyin">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Николай Ильин</h3>
+                                    <p class="section-text">1100 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Кричевский, Владимир</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide modyleSystem">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Модульные сетки в граф...</h3>
+                                    <p class="section-text">1450 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Мюллер-Брокман, Йозеф</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide graphicEvolution">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Эволюция графических стилей</h3>
+                                    <p class="section-text">2450 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Хеллер, Чваст</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                            <div class="swiper-slide edition__swiper-slide artAndVisual">
+                                <div class="edition__slide-header">
+                                    <h3 class="filter-menu__heading">Искусство и визуальное в...</h3>
+                                    <p class="section-text">2200 руб.</p>
+                                </div>
+                                <h3 class="filter-menu__subtitle">Арнхейм, Рудольф</h3>
+                                <button class="button edition__button">Заказать</button>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination swiper-pagination__edition"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev gallery__button-prev swiper-button-prev__edition"></div>
+                        <div class="swiper-button-next gallery__button-next swiper-button-next__edition"></div>
+                    </div>
                 </div>
             </div>
             </div>
         </section>
-        <section class="section-projects">
+        <!--  <section class="section-projects">
             <div class="container">
                 <h2 class="section-heading">Проекты</h2>
                 <p class="section-text">

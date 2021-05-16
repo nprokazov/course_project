@@ -159,3 +159,18 @@ const swiperEvent = new Swiper('.section-event__swiper', {
         type: 'bullets',
     },
 });
+
+// swiper-edition
+
+const swiperEdition = new Swiper('.edition__swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+});
