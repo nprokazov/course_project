@@ -745,6 +745,21 @@
                                         name="Журналы и газеты"><span>Журналы и газеты</span></label>
                             </li>
                         </ul>
+                        <select class="filter-menu__choices" multiple>
+                            <option placeholder>Категории</option>
+                            <option value="bestseller">Бестселлеры</option>
+                            <option value="art">Искусство</option>
+                            <option value="architure">Архитектура</option>
+                            <option value="design">Дизайн</option>
+                            <option value="fashion">Мода</option>
+                            <option value="children">Детям</option>
+                            <option value="fiction">Художественная литература</option>
+                            <option value="publicism">Публицистика</option>
+                            <option value="guides">Путеводители</option>
+                            <option value="philosophy">Философия</option>
+                            <option value="education">Учебная литература</option>
+                            <option value="magazinesNewspaper">Журналы и газеты</option>
+                        </select>
                         <h3 class="filter-menu__heading edition__heading-price">Цена</h3>
                         <div class="filter-range">
                             <span class="filter-range__Text">От</span>
@@ -754,6 +769,64 @@
                             <span class="filter-range__Text">Руб.</span>
                         </div>
                     </div>
+                    <ul class="edition-card__list">
+                        <li class="edition-card__item artOfColor">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Искусство цвета</h3>
+                                <p class="section-text">620 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Иттен, Йоханес</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item typographie">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Типографика</h3>
+                                <p class="section-text">2450 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Рудер, Эмиль</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item bookaboutLetters">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Книга про буквы</h3>
+                                <p class="section-text">2200 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Гордон, Юрий</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item nikolayIlyin">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Николай Ильин</h3>
+                                <p class="section-text">1100 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Кричевский, Владимир</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item modyleSystem">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Модульные сетки в граф...</h3>
+                                <p class="section-text">1450 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Мюллер-Брокман, Йозеф</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item graphicEvolution">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Эволюция графических стилей</h3>
+                                <p class="section-text">2450 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Хеллер, Чваст</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                        <li class="edition-card__item artAndVisual">
+                            <div class="edition__slide-header">
+                                <h3 class="filter-menu__heading">Искусство и визуальное в...</h3>
+                                <p class="section-text">2200 руб</p>
+                            </div>
+                            <h3 class="filter-menu__subtitle">Арнхейм, Рудольф</h3>
+                            <button class="button edition__button">Заказать</button>
+                        </li>
+                    </ul>
                     <div class="swiper-container edition__swiper-container">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper edition__swiper-wrapper">
@@ -761,7 +834,7 @@
                             <div class="swiper-slide edition__swiper-slide artOfColor">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Искусство цвета</h3>
-                                    <p class="section-text">620 руб.</p>
+                                    <p class="section-text">620 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Иттен, Йоханес</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -769,7 +842,7 @@
                             <div class="swiper-slide edition__swiper-slide typographie">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Типографика</h3>
-                                    <p class="section-text">2450 руб.</p>
+                                    <p class="section-text">2450 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Рудер, Эмиль</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -777,7 +850,7 @@
                             <div class="swiper-slide edition__swiper-slide bookaboutLetters">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Книга про буквы</h3>
-                                    <p class="section-text">2200 руб.</p>
+                                    <p class="section-text">2200 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Гордон, Юрий</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -785,7 +858,7 @@
                             <div class="swiper-slide edition__swiper-slide nikolayIlyin">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Николай Ильин</h3>
-                                    <p class="section-text">1100 руб.</p>
+                                    <p class="section-text">1100 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Кричевский, Владимир</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -793,7 +866,7 @@
                             <div class="swiper-slide edition__swiper-slide modyleSystem">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Модульные сетки в граф...</h3>
-                                    <p class="section-text">1450 руб.</p>
+                                    <p class="section-text">1450 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Мюллер-Брокман, Йозеф</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -801,7 +874,7 @@
                             <div class="swiper-slide edition__swiper-slide graphicEvolution">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Эволюция графических стилей</h3>
-                                    <p class="section-text">2450 руб.</p>
+                                    <p class="section-text">2450 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Хеллер, Чваст</h3>
                                 <button class="button edition__button">Заказать</button>
@@ -809,7 +882,7 @@
                             <div class="swiper-slide edition__swiper-slide artAndVisual">
                                 <div class="edition__slide-header">
                                     <h3 class="filter-menu__heading">Искусство и визуальное в...</h3>
-                                    <p class="section-text">2200 руб.</p>
+                                    <p class="section-text">2200 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Арнхейм, Рудольф</h3>
                                 <button class="button edition__button">Заказать</button>
