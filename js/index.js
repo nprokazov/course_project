@@ -159,3 +159,35 @@ const swiperEvent = new Swiper('.section-event__swiper', {
         type: 'bullets',
     },
 });
+
+// swiper-edition
+
+const swiperEdition = new Swiper('.edition__swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+        1366: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 43,
+        }
+    }
+});
+
+// edition menu choices
+
+const element2 = document.querySelector(".filter-menu__choices")
+const choices2 = new Choices (element2, {
+    searchEnabled: false,
+    itemSelectText: null,
+    removeItemButton: true,
+});

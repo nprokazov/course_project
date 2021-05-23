@@ -64,6 +64,10 @@ ul {
     border-radius: 100px;
 }
 
+.button {
+    cursor: pointer;
+}
+
 .section-heading {
     font-size: var(--h2FontSize);
     line-height: 48px;
@@ -1144,7 +1148,7 @@ ul {
 .event-card {
     position: relative;
     margin-bottom: 30px;
-    padding: 320px 25px 150px 51px;
+    padding: 20% 25px 150px 51px;
     width: calc(100%/3 - 2%);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1191,7 +1195,7 @@ ul {
 
 .section-event__button {
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 30px auto;
     padding: 18px 45px;
     background: none;
     color: var(--mainColor);
@@ -1199,6 +1203,204 @@ ul {
 
 .section-event__swiper {
     display: none;
+}
+
+/* edition */
+
+.section-edition {
+    margin-top: 83px;
+    padding: 93px 0 80px 0;
+    background: url("background_img/edition/sectionBackground.jpg");
+}
+
+.section-content {
+    display: flex;
+}
+
+.filter-menu__edition {
+    flex-basis: 28%;
+    display: flex;
+    flex-direction: column;
+    color: var(--whiteTextColor);
+}
+
+.edition__heading {
+    margin-top: 30px;
+}
+
+.filter-menu__item {
+    margin-top: 14px;
+}
+
+.filter-menu__checkbox {
+    position: relative;
+}
+
+.filter-menu__checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.filter-menu__checkbox>input+span::before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    width: 10px;
+    height: 10px;
+    border: var(--whiteTextColor) solid 1px;
+}
+
+.filter-menu__checkbox>input:checked+span::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:checked+span {
+    color: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:checked+span::before {
+    border-color: var(--mainColor);
+}
+
+.filter-menu__checkbox>input:focus+span {
+    outline: solid 1px var(--mainColor);
+}
+
+.filter-menu__checkbox:hover>span {
+    color: var(--mainColor);
+}
+
+.filter-menu__checkbox:hover>span::before {
+    border-color: var(--mainColor);
+}
+
+.edition__heading-price {
+    margin-top: 41px;
+}
+
+.filter-range {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 0 9px;
+    max-width: 280px;
+    border: solid 1px var(--whiteTextColor);
+    border-radius: 5px;
+}
+
+.filter-range__Text {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 9px 0;
+}
+
+.filter-range__Input {
+    padding: 0 10px;
+    width: 30%;
+    height: 100%;
+    background: var(--mainColor);
+    color: var(--whiteTextColor);
+    border: none;
+}
+
+.edition-card__list {
+    display: none;
+}
+
+.section-edition .choices {
+    display: none;
+}
+
+.edition__swiper-container {
+    flex-basis: 72%;
+}
+
+.edition__swiper-wrapper {
+    align-items: flex-end;
+}
+
+.edition__swiper-slide {
+    padding: 35% 0 1px 0;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--whiteTextColor);
+}
+
+.artOfColor {
+    background-image: url(background_img/edition/card/artOfColor.jpg);
+}
+
+.typographie {
+    background-image: url(background_img/edition/card/typographie.jpg);
+}
+
+.bookaboutLetters {
+    background-image: url(background_img/edition/card/bookaboutLetters.jpg);
+}
+
+.nikolayIlyin {
+    background-image: url(background_img/edition/card/nikolayIlyin.jpg);
+}
+
+.modyleSystem {
+    background-image: url(background_img/edition/card/modyleSystem.jpg);
+}
+
+.graphicEvolution {
+    background-image: url(background_img/edition/card/graphicEvolution.jpg);
+}
+
+.artAndVisual {
+    background-image: url(background_img/edition/card/artAndVisual.jpg);
+}
+
+.edition__slide-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edition__swiper-slide .section-text {
+    margin: 0;
+    width: auto;
+    line-height: 30px;
+}
+
+.edition__swiper-slide .filter-menu__heading {
+    margin: 0;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.edition__button {
+    margin-top: 16px;
+    padding: 8px 24px;
+    color: var(--whiteTextColor);
+    background: none;
+}
+
+.filter-menu__subtitle {
+    font-size: var(--pFontSize);
+    font-weight: 400;
+}
+
+.swiper-pagination__edition {
+    top: 28px;
+    left: 50px;
+    bottom: auto;
+    width: auto;
+    color: var(--whiteTextColor);
+}
+
+.swiper-button-prev__edition, .swiper-button-next__edition {
+    top: 43px;
 }
 
 @media (max-width: 1366px) {
@@ -1320,10 +1522,27 @@ ul {
         background-image: url("background_img/event/MMAM-1024.jpg");
     }
     .event-card {
-        padding: 220px 16px 108px 35px;
+        padding: 22% 16px 108px 35px;
     }
     .event-card .section-text {
         width: 92%;
+    }
+    .section-event__button {
+        margin: 36px auto 30px auto;
+    }
+    /* edition */
+    .filter-menu__edition {
+        flex-basis: 31%;
+    }
+    .edition__swiper-container {
+        flex-basis: 67%;
+    }
+    .edition__swiper-wrapper {
+        align-items: flex-start;
+    }
+    .edition__swiper-slide {
+        margin-top: 13%;
+        padding: 53% 0 1px 0;
     }
 }
 
@@ -1429,7 +1648,7 @@ ul {
         background-image: url("background_img/event/MMAM-768.jpg");
     }
     .event-card {
-        padding: 220px 16px 140px 35px;
+        padding: 31% 16px 140px 35px;
         width: calc(100%/2 - 2.6%);
     }
     .event-card:not(:nth-child(-n+2)) {
@@ -1446,6 +1665,29 @@ ul {
     }
     .event-card .section-text {
         margin-top: 2px;
+    }
+    /* edition */
+    .section-edition {
+        padding: 88px 0 50px 0;
+    }
+    .section-content {
+        flex-direction: column;
+    }
+    .edition__swiper-container {
+        width: 100%;
+    }
+    .edition__swiper-slide {
+        margin-top: 15%;
+        padding: 53% 0 1px 0;
+    }
+    .swiper-pagination__edition {
+        top: 45px;
+    }
+    .filter-menu__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 136px;
     }
 }
 
@@ -1678,7 +1920,7 @@ ul {
     }
     .event-card {
         margin: 0;
-        padding: 217px 5px 140px 30px;
+        padding: 210px 5px 140px 30px;
         height: 683px;
     }
     .event-card .content-heading {
@@ -1707,6 +1949,153 @@ ul {
     .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
+    }
+    /* edition */
+    .section-edition {
+        margin-top: 40px;
+        padding-top: 45px;
+    }
+    .edition__swiper-container {
+        display: none;
+    }
+    .filter-menu__item {
+        display: none;
+    }
+    .edition__heading {
+        display: none;
+    }
+    .section-edition .choices {
+        display: block;
+        margin-top: 7px;
+    }
+    .section-edition .choices::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url('background_img/edition/arrowWhite.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        transition: transform .3s ease;
+    }
+    .section-edition .is-open.choices::after {
+        transform: rotate(270deg);
+    }
+    .section-edition .choices__input {
+        min-width: 12ch !important;
+        background: rgba(0, 0, 0, 0);
+        color: var(--whiteTextColor);
+    }
+    .section-edition .choices__input::placeholder {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--whiteTextColor);
+    }
+    .section-edition .choices__inner {
+        display: flex;
+        padding: 7.5px 0 0 0;
+        min-height: 40px;
+        flex-direction: column-reverse;
+        border: none;
+        border-top: 1px solid var(--whiteTextColor);
+        border-bottom: 1px solid var(--whiteTextColor);
+        border-radius: 0;
+    }
+    .section-edition .choices__item {
+        padding: 0;
+    }
+    .section-edition .choices__list--multiple .choices__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 11px 0;
+        font-size: 16px;
+        margin: 0;
+        border: none;
+        border-top: 1px solid var(--whiteTextColor);
+        border-radius: 0;
+        background: none;
+        color: var(--mainColor);
+    }
+    .section-edition .choices__list--multiple .choices__item::before {
+        border-color: var(--mainColor);
+    }
+    .section-edition .choices__list--multiple .choices__item::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 2.5px);
+        left: 3px;
+        width: 5px;
+        height: 5px;
+        background: var(--mainColor);
+        border-radius: 50%;
+    }
+    .section-edition .choices__item::before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        vertical-align: middle;
+        border: solid 1px var(--whiteTextColor);
+    }
+    .choices[data-type*=select-multiple] .choices__button {
+        margin-left: auto;
+        background-image: url(background_img/edition/delChoicesIcon.svg);
+        background-size: contain;
+        border-left: none;
+    }
+    .section-edition .choices__list--dropdown {
+        background: rgba(9, 8, 11, 0.6);
+        color: var(--whiteTextColor);
+    }
+    .section-edition .choices__item--choice {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        border: none;
+        border-top: solid 1px var(--whiteTextColor);
+        font-size: 16px;
+    }
+    .edition-card__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .edition-card__item {
+        padding: 155px 0 0 0;
+        width: 45%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .edition-card__item:nth-child(n+3) {
+        margin-top: 55px;
+    }
+    .edition-card__list .filter-menu__heading {
+        margin: 0;
+        font-size: 12px;
+    }
+    .edition-card__list .filter-menu__subtitle {
+        margin: 0;
+        font-size: 12px;
+        color: var(--whiteTextColor);
+    }
+    .edition-card__list .section-text {
+        margin: 7px 0 0 0;
+        font-size: 12px;
+        color: var(--whiteTextColor);
+        line-height: 12px;
+    }
+    .edition-card__list .edition__button {
+        margin-top: 13px;
+        padding: 10px 24px;
+        width: 100%;
+        font-size: 12px;
     }
 }
 
