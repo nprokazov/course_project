@@ -1968,11 +1968,21 @@ ul {
         display: block;
         margin-top: 7px;
     }
-    .section-edition .choices__inner {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: 7.5px 0 0 0;
-        min-height: 40px;
+    .section-edition .choices::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url('background_img/edition/arrowWhite.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        transition: transform .3s ease;
+    }
+    .section-edition .is-open.choices::after {
+        transform: rotate(270deg);
     }
     .section-edition .choices__input {
         min-width: 12ch !important;
@@ -1986,6 +1996,8 @@ ul {
     }
     .section-edition .choices__inner {
         display: flex;
+        padding: 7.5px 0 0 0;
+        min-height: 40px;
         flex-direction: column-reverse;
         border: none;
         border-top: 1px solid var(--whiteTextColor);
@@ -2037,8 +2049,53 @@ ul {
         background-size: contain;
         border-left: none;
     }
-    .choices__item--choice {
-        padding: 10px 0;
+    .section-edition .choices__list--dropdown {
+        background: rgba(9, 8, 11, 0.6);
+        color: var(--whiteTextColor);
+    }
+    .section-edition .choices__item--choice {
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        border: none;
+        border-top: solid 1px var(--whiteTextColor);
+        font-size: 16px;
+    }
+    .edition-card__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .edition-card__item {
+        padding: 155px 0 0 0;
+        width: 45%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .edition-card__item:nth-child(n+3) {
+        margin-top: 55px;
+    }
+    .edition-card__list .filter-menu__heading {
+        margin: 0;
+        font-size: 12px;
+    }
+    .edition-card__list .filter-menu__subtitle {
+        margin: 0;
+        font-size: 12px;
+        color: var(--whiteTextColor);
+    }
+    .edition-card__list .section-text {
+        margin: 7px 0 0 0;
+        font-size: 12px;
+        color: var(--whiteTextColor);
+        line-height: 12px;
+    }
+    .edition-card__list .edition__button {
+        margin-top: 13px;
+        padding: 10px 24px;
+        width: 100%;
+        font-size: 12px;
     }
 }
 
