@@ -145,7 +145,7 @@ const choices = new Choices(element, {
 
 // accordion
 
-$( "#accordion" ).accordion({
+$("#accordion").accordion({
     header: "h3",
     heightStyle: "content",
 });
@@ -186,8 +186,32 @@ const swiperEdition = new Swiper('.edition__swiper-container', {
 // edition menu choices
 
 const element2 = document.querySelector(".filter-menu__choices")
-const choices2 = new Choices (element2, {
+const choices2 = new Choices(element2, {
     searchEnabled: false,
     itemSelectText: null,
     removeItemButton: true,
 });
+//tooltip
+tippy('.popup');
+
+// project swiper
+
+const swiperProjects = new Swiper('.projects__swiper-container', {
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+        1366: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 40,
+        },
+        566: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 30
+        },
+    }
+})
