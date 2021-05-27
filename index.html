@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/index.js" defer></script>
 </head>
 
@@ -790,24 +792,24 @@
                         </li>
                         <li class="edition-card__item nikolayIlyin">
                             <h3 class="filter-menu__heading">Николай Ильин</h3>
-                            <h3 class="filter-menu__subtitle">Кричевский, Влади...</h3>
+                            <h3 class="filter-menu__subtitle">Кричевский, Владимир</h3>
                             <p class="section-text">1100 руб</p>
                             <button class="button edition__button">Заказать</button>
                         </li>
                         <li class="edition-card__item modyleSystem">
-                            <h3 class="filter-menu__heading">Модульные сетки...</h3>
-                            <h3 class="filter-menu__subtitle">Мюллер-Брокман...</h3>
+                            <h3 class="filter-menu__heading">Модульные сетки в графическом дизайне</h3>
+                            <h3 class="filter-menu__subtitle">Мюллер-Брокман, Йозеф</h3>
                             <p class="section-text">1450 руб</p>
                             <button class="button edition__button">Заказать</button>
                         </li>
                         <li class="edition-card__item graphicEvolution">
-                            <h3 class="filter-menu__heading">Эволюция графич...</h3>
+                            <h3 class="filter-menu__heading">Эволюция графических стилей</h3>
                             <h3 class="filter-menu__subtitle">Хеллер, Чваст</h3>
                             <p class="section-text">2450 руб</p>
                             <button class="button edition__button">Заказать</button>
                         </li>
                         <li class="edition-card__item artAndVisual">
-                            <h3 class="filter-menu__heading">Искусство и визуа...</h3>
+                            <h3 class="filter-menu__heading">Искусство и визуальное восприятие</h3>
                             <h3 class="filter-menu__subtitle">Арнхейм, Рудольф</h3>
                             <p class="section-text">2200 руб</p>
                             <button class="button edition__button">Заказать</button>
@@ -851,7 +853,7 @@
                             </div>
                             <div class="swiper-slide edition__swiper-slide modyleSystem">
                                 <div class="edition__slide-header">
-                                    <h3 class="filter-menu__heading">Модульные сетки в граф...</h3>
+                                    <h3 class="filter-menu__heading">Модульные сетки в графическом дизайне</h3>
                                     <p class="section-text">1450 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Мюллер-Брокман, Йозеф</h3>
@@ -867,7 +869,7 @@
                             </div>
                             <div class="swiper-slide edition__swiper-slide artAndVisual">
                                 <div class="edition__slide-header">
-                                    <h3 class="filter-menu__heading">Искусство и визуальное в...</h3>
+                                    <h3 class="filter-menu__heading">Искусство и визуальное восприятие</h3>
                                     <p class="section-text">2200 руб</p>
                                 </div>
                                 <h3 class="filter-menu__subtitle">Арнхейм, Рудольф</h3>
@@ -885,7 +887,7 @@
             </div>
             </div>
         </section>
-        <!--  <section class="section-projects">
+        <section class="section-projects">
             <div class="container">
                 <h2 class="section-heading">Проекты</h2>
                 <p class="section-text">
@@ -893,21 +895,44 @@
                     однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые
                     государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего
                     возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span
-                        class="popup">i</span>
+                        class="popup"
+                        data-tippy-content="Пример современных тенденций - современная методология разработки">i</span>
                     обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности
                     принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
-                    <span class="popup">i</span>
-                    исключительно в разрезе маркетинговых и финансовых <span class="popup">i</span> предпосылок.
+                    <span class="popup"
+                        data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">i</span>
+                    исключительно в разрезе маркетинговых и финансовых <span class="popup"
+                        data-tippy-content="В стремлении повысить качество">i</span> предпосылок.
                     Банальные, но неопровержимые выводы,
                     а также представители современных социальных резервов призывают нас к новым свершениям, которые, в
                     свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
                     Подробнее: <a href="" class="text-link">blanchard-art.ru/projects/about</a>
                 </p>
-                <h3 class="content-heading">Партнеры проектов</h3>
-                <div class="swiper"></div>
+                <h3 class="content-heading">Партнеры проектов:</h3>
+                <!-- Slider main container -->
+                <div class="projects__sw-container">
+                    <div class="swiper-container projects__swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper projects__swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide projects__swiper-slide freelands"></div>
+                            <div class="swiper-slide projects__swiper-slide conteporary"></div>
+                            <div class="swiper-slide projects__swiper-slide workhouse"></div>
+                            <div class="swiper-slide projects__swiper-slide n1849"></div>
+                            <div class="swiper-slide projects__swiper-slide hicox"></div>
+                            <div class="swiper-slide projects__swiper-slide camden"></div>
+                            <div class="swiper-slide projects__swiper-slide stassen"></div>
+                            <div class="swiper-slide projects__swiper-slide watssGalley"></div>
+                            <div class="swiper-slide projects__swiper-slide esad"></div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </section>
-        <section class="section-contacts">
+        <!--  <section class="section-contacts">
             <div class="container">
                 <h2 class="section-heading">Контакты</h2>
                 <div class="section-container">
