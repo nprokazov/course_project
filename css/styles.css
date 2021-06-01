@@ -1539,10 +1539,6 @@ ul {
 
 /* contacts */
 
-.mobile__320 {
-    display: none;
-}
-
 .section-contacts {
     padding: 80px 0 0 0;
 }
@@ -1575,6 +1571,10 @@ ul {
     flex-direction: column;
     margin-top: 36px;
     max-width: 76%;
+}
+
+.mobile__320 {
+    display: none;
 }
 
 .callback__form .content-heading {
