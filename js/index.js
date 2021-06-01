@@ -198,6 +198,7 @@ tippy('.popup');
 
 const swiperProjects = new Swiper('.projects__swiper-container', {
     slidesPerView: 1,
+    loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -206,12 +207,39 @@ const swiperProjects = new Swiper('.projects__swiper-container', {
         1366: {
             slidesPerView: 3,
             slidesPerGroup: 3,
+            loop: true,
             spaceBetween: 40,
         },
         566: {
             slidesPerView: 2,
             slidesPerGroup: 2,
+            loop: true,
             spaceBetween: 30
         },
     }
 })
+
+//map
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.75846806898367, 37.60108849999989],
+        zoom: 15
+    });
+        var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
+            iconLayout: 'default#image',
+        iconImageHref: 'js/iconPoin.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [0, 0]
+    });
+    var myPlacemark2 = new ymaps.Placemark(myMap.getCenter(), {}, {
+        iconLayout: 'default#image',
+        // iconImageHref: 'point.jpg',
+        iconImageSize: [30, 30],
+        iconImageOffset: [0, 0]
+    });
+    myMap.geoObjects.add(myPlacemark);
+    // myMap.geoObjects.add(myPlacemark2);
+}
+
