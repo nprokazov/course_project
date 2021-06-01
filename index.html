@@ -17,6 +17,8 @@
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
     <script src="js/index.js" defer></script>
 </head>
 
@@ -932,34 +934,48 @@
                 </div>
             </div>
         </section>
-        <!--  <section class="section-contacts">
+        <section class="section-contacts">
             <div class="container">
                 <h2 class="section-heading">Контакты</h2>
-                <div class="section-container">
-                    <div class="callback">
-                        <h3 class="callback__heading">Шоурум №4</h3>
-                        <address class="callback__address">Леонтьевский переулок, дом 5, строение 1</address>
-                        <form action="POST" class="callback__form">
-                            <h3 class="content-heading">Заказать обратный звонок</h3>
-                            <input type="text" name="" class="callback__input" placeholder="Имя*">
-                            <input type="phone" name="" class="callback__input" placeholder="Телефон*">
-                            <button class="button">Заказать</button>
-                        </form>
-                        <div class="fast-contact">
-                            <h3 class="content-heading">Связаться в один клик</h3>
-                            <ul class="fast-contact__list">
-                                <li class="fast-contact__item"><a href=""><span class="whatsapp"></span></a></li>
-                                <li class="fast-contact__item"><a href=""><span class="telegramm"></span></a></li>
-                            </ul>
-                        </div>
+            </div>
+            <div class="section-container">
+                <div class="callback">
+                    <h3 class="callback__heading">Шоурум №4</h3>
+                    <address class="callback__address">Леонтьевский переулок, дом 5, строение 1</address>
+                    <form action="POST" class="callback__form desktop">
+                        <h3 class="content-heading">Заказать обратный звонок</h3>
+                        <input type="text" name="" class="callback__input" placeholder="Имя*">
+                        <input type="phone" name="" class="callback__input" placeholder="Телефон*">
+                        <button class="button button__callback">Заказать</button>
+                    </form>
+                    <div class="fast-contact desktop">
+                        <h3 class="content-heading">Связаться в один клик</h3>
+                        <ul class="fast-contact__list">
+                            <li class="fast-contact__item"><a href=""><span class="whatsapp"></span></a></li>
+                            <li class="fast-contact__item"><a href=""><span class="telegramm"></span></a></li>
+                        </ul>
                     </div>
-                    <div class="map">MAP</div>
+                </div>
+                <div id="map"></div>
+                <form action="POST" class="callback__form mobile__320">
+                    <h3 class="content-heading">Заказать обратный звонок</h3>
+                    <input type="text" name="" class="callback__input" placeholder="Имя*">
+                    <input type="phone" name="" class="callback__input" placeholder="Телефон*">
+                    <button class="button button__callback">Заказать</button>
+                </form>
+                <div class="fast-contact mobile__320">
+                    <h3 class="content-heading">Связаться в один клик</h3>
+                    <ul class="fast-contact__list">
+                        <li class="fast-contact__item"><a href=""><span class="whatsapp"></span></a></li>
+                        <li class="fast-contact__item"><a href=""><span class="telegramm"></span></a></li>
+                    </ul>
                 </div>
             </div>
+
         </section>
     </main>
 
-    <footer class="footer">
+    <!--  <footer class="footer">
         <div class="container">
             <div class="logo"><a href=""><img src="content_img/logo.svg" alt=""></a></div>
             <ul class="social-network">
