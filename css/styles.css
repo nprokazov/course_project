@@ -817,7 +817,17 @@ ul {
     width: 30px;
     height: 30px;
     background: grey;
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 30px;
+}
+
+.gallery__button-next:hover, .gallery__button-prev:hover {
+    background: var(--mainColor);
+}
+
+.gallery__button-next:active, .gallery__button-prev:active {
+    background: var(--activeColor);
+    border: 1px solid black;
 }
 
 .gallery__button-next::after, .gallery__button-prev::after {
@@ -1040,14 +1050,14 @@ ul {
     margin: 0 10px 0 0;
     width: 50px;
     height: 50px;
-    background: url("background_img/catalog/arrow.svg") 40% 50%/40% no-repeat #ececec;
+    background: url("background_img/catalog/arrow.svg") center/40% no-repeat #ececec;
     border-radius: 50%;
-    transform: rotate(90deg);
+    transform: rotate(0deg);
     transition: transform ease .3s;
 }
 
 .ui-state-active .ui-icon {
-    transform: rotate(270deg);
+    transform: rotate(180deg);
 }
 
 .ui-state-active {
@@ -1433,7 +1443,16 @@ ul {
     font-size: 12px;
     font-weight: 700;
     border-radius: 50%;
-    background: var(--mainColor);
+    border: solid 1px var(--mainColor);
+    background: none;
+}
+
+.popup:hover {
+    background: #D1A9F0;
+}
+
+.popup:active svg * {
+    fill: #ffffff;
 }
 
 .tippy-box {
@@ -1550,7 +1569,7 @@ ul {
 }
 
 .callback {
-    padding-bottom: 120px;
+    padding-bottom: 122px;
     flex-basis: 36%;
     padding-left: calc((100vw - 1600px) / 2);
     border: #cacaca solid 1px;
@@ -1573,6 +1592,12 @@ ul {
     max-width: 76%;
 }
 
+.validate-input {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 19px;
+}
+
 .mobile__320 {
     display: none;
 }
@@ -1585,7 +1610,24 @@ ul {
     margin-top: 19px;
     padding-left: 27px;
     height: 43px;
+    border: 1px solid #333333;
     border-radius: 100px;
+}
+
+.validate-input .callback__input {
+    margin-top: 0;
+}
+
+.callback__input:hover {
+    background: #eaeaea;
+}
+
+.callback__input:focus {
+    background: #eaeaea;
+}
+
+.callback__input:focus {
+    outline: none;
 }
 
 .button__callback {
@@ -1604,11 +1646,29 @@ ul {
     margin-top: 20px;
 }
 
+.fast-contact__item:hover span {
+    opacity: .5;
+}
+
+.fast-contact__item a:focus {
+    outline: none;
+}
+
+.fast-contact__item a:focus span {
+    opacity: .5;
+}
+
+.fast-contact__item a:active span {
+    border: 1px solid var(--activeColor);
+    opacity: 1;
+}
+
 .whatsapp, .telegramm {
     display: block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .whatsapp {
@@ -1623,6 +1683,57 @@ ul {
 #map {
     flex-basis: 64%;
     height: auto;
+}
+
+.ymaps-2-1-78-ground-pane {
+    filter: grayscale();
+}
+
+/* footer */
+
+.footer {
+    padding: 50px 0;
+    background: #000000;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+}
+
+.footer .logo {
+    margin: 0;
+}
+
+.social-network {
+    display: flex;
+    margin-left: auto;
+}
+
+.social-network__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-network__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.social-network__icon:hover svg * {
+    fill: #ffffff;
+}
+
+.social-network a:focus svg * {
+    fill: #ffffff;
+}
+
+.social-network a:active svg * {
+    fill: var(--mainColor);
+}
+
+.social-network a:focus {
+    outline: none;
 }
 
 @media (max-width: 1920px) {
@@ -1782,9 +1893,8 @@ ul {
     /* contacts */
     .callback {
         padding-left: calc((100vw - 90.23vw) / 2);
-    }
-    .callback {
         flex-basis: 48%;
+        padding-bottom: 100px;
     }
     #map {
         flex-basis: 52%;
@@ -1795,6 +1905,17 @@ ul {
     }
     .whatsapp {
         margin-right: 28px;
+    }
+    /* footer */
+    .footer {
+        padding: 44px 0;
+    }
+    .social-network__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .social-network__icon {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -1972,6 +2093,10 @@ ul {
     }
     #map {
         flex-basis: 44%;
+    }
+    /* footer */
+    .footer {
+        padding: 39px 0;
     }
 }
 
@@ -2477,6 +2602,24 @@ ul {
     #map {
         margin-top: 15px;
         flex-basis: 320px;
+    }
+    /* footer */
+    .footer {
+        margin-top: 30px;
+        padding: 20px 0;
+    }
+    .footer__container {
+        flex-direction: column-reverse;
+    }
+    .social-network {
+        margin: 0;
+    }
+    .social-network__icon {
+        width: 50px;
+        height: 50px;
+    }
+    .footer .logo {
+        margin-top: 20px;
     }
 }
 
