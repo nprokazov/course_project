@@ -227,19 +227,43 @@ function init() {
         center: [55.75846806898367, 37.60108849999989],
         zoom: 15
     });
-        var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
-            iconLayout: 'default#image',
+    var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
+        iconLayout: 'default#image',
         iconImageHref: 'js/iconPoin.svg',
         iconImageSize: [20, 20],
         iconImageOffset: [0, 0]
     });
-    var myPlacemark2 = new ymaps.Placemark(myMap.getCenter(), {}, {
-        iconLayout: 'default#image',
-        // iconImageHref: 'point.jpg',
-        iconImageSize: [30, 30],
-        iconImageOffset: [0, 0]
-    });
     myMap.geoObjects.add(myPlacemark);
-    // myMap.geoObjects.add(myPlacemark2);
 }
+
+//validate
+new JustValidate('.callback__form', {
+    rules: {
+        name: {
+            required: true,
+            minLength: 3,
+            strength: {
+                custom: '[A-zА-яЁё]'
+            }
+        }
+    },
+    messages: {
+        name: {
+            required: 'Вы ничего не ввели',
+            minLength: 'Введено недостаточно символов',
+            strength: 'Вы ввели не буквы'
+        }
+    }
+});
+new JustValidate('.callback__form320', {
+    rules: {
+        name: {
+            required: true,
+            minLength: 3,
+            strength: {
+                custom: '[^-\\s0-9`~!@#№$%^&*()_=+\\\\|\\[\\]{};:\',.<>\\/?]'
+            }
+        }
+    }
+});
 
