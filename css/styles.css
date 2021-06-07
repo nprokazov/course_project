@@ -1109,9 +1109,22 @@ ul {
     outline: solid 2px var(--mainColor);
 }
 
+.ui-state-focus .accordion_header {
+    background: var(--mainColor);
+    color: #ffffff;
+}
+
+.ui-state-focus .ui-icon {
+    background-color: #d2abf0;
+}
+
+.ui-state-hover .ui-icon {
+    background-color: #d2abf0;
+}
+/* 
 .ui-state-hover .ui-icon {
     background-color: var(--mainColor);
-}
+} */
 
 .ui-state-hover {
     color: var(--mainColor);
@@ -1505,6 +1518,7 @@ ul {
     background: url('background_img/arrow\ \(black\).svg') center/50% no-repeat #cacaca;
     border-radius: 50%;
     opacity: .5;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .section-projects .swiper-button-prev::after {
@@ -1513,6 +1527,15 @@ ul {
 
 .section-projects .swiper-button-next::after {
     transform: rotate(-90deg);
+}
+
+.project__button-next:hover::after, .project__button-prev:hover::after {
+    background-color: var(--mainColor);
+}
+
+.project__button-next:active::after, .project__button-prev:active::after {
+    background-color: var(--activeColor);
+    border: 1px solid black;
 }
 
 .freelands {
