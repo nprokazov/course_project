@@ -254,18 +254,6 @@ new JustValidate('.callback__form', {
             strength: 'Вы ввели не буквы'
         }
     },
-    submitHandler: function (form, values, ajax) {
-
-        ajax({
-            url: 'mail.php',
-            method: 'POST',
-            data: values,
-            async: true,
-            callback: function(response)  {
-                console.log(response)
-            }
-        });
-    },
 });
 new JustValidate('.callback__form320', {
     rules: {
@@ -276,18 +264,6 @@ new JustValidate('.callback__form320', {
                 custom: '[^-\\s0-9`~!@#№$%^&*()_=+\\\\|\\[\\]{};:\',.<>\\/?]'
             }
         }
-    },
-    submitHandler: function (form, values, ajax) {
-
-        ajax({
-            url: 'main.php',
-            method: 'POST',
-            data: values,
-            async: true,
-            callback: function(response)  {
-                console.log(response)
-            }
-        });
     },
 });
 
